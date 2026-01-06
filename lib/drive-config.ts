@@ -1,52 +1,52 @@
 // Google Drive API configuration
-export const GOOGLE_API_KEY = "AIzaSyALQYyTG9yMs9Xd2leIqYgcxybOzFWciY0"
+export const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY || ""
 
 // Drive folder IDs for each term
 export const TERM_FOLDERS: Record<string, { id: string; name: string; year: number; term: number }> = {
   "term-1": {
-    id: "1c7adpUaAI327YI9JPRqXTSkmbUZwPud_",
+    id: process.env.NEXT_PUBLIC_TERM_1_FOLDER_ID || "",
     name: "First Term",
     year: 1,
     term: 1,
   },
   "term-2": {
-    id: "1c8UAlRoN4iiPEZ-tnIfSZPaUDRtopIEf",
+    id: process.env.NEXT_PUBLIC_TERM_2_FOLDER_ID || "",
     name: "Second Term",
     year: 1,
     term: 2,
   },
   "term-3": {
-    id: "1cBng7j7H0eQnQiZj5RfXEu0bT1doPFFr",
+    id: process.env.NEXT_PUBLIC_TERM_3_FOLDER_ID || "",
     name: "Third Term",
     year: 2,
     term: 1,
   },
   "term-4": {
-    id: "1cP21tY5DZC_mv-_V_sE3A-Yl0c6odD23",
+    id: process.env.NEXT_PUBLIC_TERM_4_FOLDER_ID || "",
     name: "Fourth Term",
     year: 2,
     term: 2,
   },
   "term-5": {
-    id: "1cPCAPpgt2-AuBf6OdSK4T9tAeU-YEmAQ",
+    id: process.env.NEXT_PUBLIC_TERM_5_FOLDER_ID || "",
     name: "Fifth Term",
     year: 3,
     term: 1,
   },
   "term-6": {
-    id: "1cRlni_gYrQiQSix7WXEXc1_pvlZ5sWh3",
+    id: process.env.NEXT_PUBLIC_TERM_6_FOLDER_ID || "",
     name: "Sixth Term",
     year: 3,
     term: 2,
   },
   "term-7": {
-    id: "1cRrbDmxWBTs7R7v9PhUnpUX2LbNqzxkq",
+    id: process.env.NEXT_PUBLIC_TERM_7_FOLDER_ID || "",
     name: "Seventh Term",
     year: 4,
     term: 1,
   },
   "term-8": {
-    id: "1cTVNjkO9WDnNAIrZb5oVXSB7-V7aaU5x",
+    id: process.env.NEXT_PUBLIC_TERM_8_FOLDER_ID || "",
     name: "Eighth Term",
     year: 4,
     term: 2,
