@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { LinkedinLogo, GithubLogo } from "@phosphor-icons/react/dist/ssr"
 
 const TEAM_MEMBERS = [
   {
@@ -248,36 +247,6 @@ export function Team() {
                   <p className="text-sm text-[var(--color-keppel-400)] font-medium">{member.role}</p>
                 </div>
               </div>
-
-              {/* Content - Social links only */}
-              {(member.linkedin || member.github) && (
-                <div className="p-4 flex flex-col items-center text-center bg-[var(--color-baltic-sea-950)]">
-                  <div className="flex gap-3">
-                    {member.linkedin && (
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s LinkedIn`}
-                        className="h-9 w-9 rounded-full border border-[var(--color-baltic-sea-700)] bg-[var(--color-baltic-sea-900)] flex items-center justify-center hover:border-[var(--color-keppel-500)] hover:bg-[var(--color-keppel-900)] hover:scale-110 transition-all duration-300"
-                      >
-                        <LinkedinLogo weight="fill" className="h-4 w-4 text-[var(--color-baltic-sea-400)] group-hover:text-[var(--color-keppel-400)]" />
-                      </a>
-                    )}
-                    {member.github && (
-                      <a
-                        href={member.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s GitHub`}
-                        className="h-9 w-9 rounded-full border border-[var(--color-baltic-sea-700)] bg-[var(--color-baltic-sea-900)] flex items-center justify-center hover:border-[var(--color-keppel-500)] hover:bg-[var(--color-keppel-900)] hover:scale-110 transition-all duration-300"
-                      >
-                        <GithubLogo weight="fill" className="h-4 w-4 text-[var(--color-baltic-sea-400)] group-hover:text-[var(--color-keppel-400)]" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>
